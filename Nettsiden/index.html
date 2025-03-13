@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studietid</title>
+    <link rel="stylesheet" href="studietid.css">
+</head>
+<body>
+
+    <h1 class="overskrifter">Studietid</h1>
+
+    <div class="bildeContainer">
+        <img src="Amalielogo.png" alt="ForsideLogo">
+    </div>
+
+    <!-- Knapp for å åpne registreringsmodal -->
+    <button id="registerBtn">Opprett bruker</button>
+
+    <!-- Knapp for å åpne innloggingsmodal -->
+    <button id="loginBtn">Logg inn</button>
+
+    <!-- Registreringsmodal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="registerForm">
+                <div class="imgcontainer">
+                    <button type="button" class="image-upload-btn" onclick="document.getElementById('fileInput').click();">
+                        Last opp bilde
+                    </button>
+                    <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="previewImage(event);">
+                    <img id="imagePreview" class="avatar" alt="Avatar Preview" style="display:none;">
+                </div>
+
+                <div class="container">
+                    <label for="username"><b>Brukernavn</b></label>
+                    <input type="text" placeholder="Skriv inn brukernavn" name="username" required>
+
+                    <label for="password"><b>Passord</b></label>
+                    <input type="password" placeholder="Skriv inn passord" name="password" required>
+
+                    <button type="submit">Opprett bruker</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Innloggingsmodal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="closeLogin">&times;</span>
+            <form id="loginForm">
+                <div class="container">
+                    <label for="loginUsername"><b>Brukernavn</b></label>
+                    <input type="text" placeholder="Skriv inn brukernavn" name="loginUsername" required>
+
+                    <label for="loginPassword"><b>Passord</b></label>
+                    <input type="password" placeholder="Skriv inn passord" name="loginPassword" required>
+
+                    <button type="submit">Logg inn</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Husk meg
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" class="cancelbtn">Avbryt</button>
+                    <span class="psw">Glemt <a href="#">passord?</a></span>
+                </div>
+            </form>
+        </div>
+    </div> 
+
+    <form>
+        <input class="input" type = "text" id = "username" placeholder="Velg Brukernavn" >
+        <input class="input" type = "password" id = "password" placeholder="Velg Passord" >
+        <button class = "btn" type = "button" onclick= "getInfo()" ></button>
+    </form>
+
+    <script src="studietid.js"></script>
+</body>
+</html>

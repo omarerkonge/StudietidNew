@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studietid Registrering</title>
+    <link rel="stylesheet" href="core.css">
+</head>
+<body>
+    <h1>Velkommen til Studietid-registrering</h1>
+
+    <!-- Registrer studietid form, Droplisten da du velger fag, under er dropliste for rom -->
+    <form id="studyTimeForm">
+        <label for="subject">Velg fag:</label>
+        <select id="subject" name="subject">
+            <option value="Matematikk">Matematikk</option>
+            <option value="Historie">Historie</option>
+            <option value="Fysikk">Fysikk</option>
+            <option value="Programmering">Programmering</option>
+        </select>
+
+        <label for="room">Velg rom:</label>
+        <select id="room" name="room">
+            <option value="Rom 101">Rom 101</option>
+            <option value="Rom 202">Rom 202</option>
+            <option value="Rom 303">Rom 303</option>
+        </select>
+
+        <button type="submit">Registrer studietid</button>
+    </form>
+
+    <h2>Dine registrerte studietider</h2>
+    <table id="studyTimeTable">
+        <thead>
+            <tr>
+                <th>Fag</th>
+                <th>Rom</th>
+                <th>Status</th>
+                <th>Handlinger</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamisk innhold -->
+        </tbody>
+    </table>
+
+    <script src="core.js"></script>
+</body>
+</html>
