@@ -15,6 +15,8 @@ app.get ('/side', (req,res) => {
     res.sendFile(publicvei, 'core.html')
 })
 
+const port = process.env.PORT
+
 /* Koble til databasen
 
 */
@@ -37,7 +39,7 @@ app.post('/api/registrerStudietid', async (req, res) => {
 });
 
 // Start serveren
-app.listen(8080, () => {
+app.listen(port, () => {
     console.log('Server kjører på http://localhost:3000');
 });
 
