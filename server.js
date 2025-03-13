@@ -37,7 +37,7 @@ app.post('/api/registrerStudietid', async (req, res) => {
 });
 
 // Start serveren
-app.listen(3000, () => {
+app.listen(8080, () => {
     console.log('Server kjører på http://localhost:3000');
 });
 
